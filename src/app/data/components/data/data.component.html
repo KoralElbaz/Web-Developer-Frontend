@@ -1,0 +1,60 @@
+<!-- The filters part -->
+<div class="filter">
+  <app-filter [filterText]="(filterTxt$|async)!" (filterTextChanged)="onFilterTextChanged($event)"></app-filter>
+
+<!-- The buttons part -->
+  <div class="btns">
+    <button type="button" class="btnAdd" (click) = "onAddRow()"><span>Add</span></button>
+    <button type="button" class="btnRemove" *ngIf="clickOnRow" (click) = "onRemoveRow()"><span>Remove</span></button>
+  </div>
+</div>
+
+<div class="container">
+  <!-- The grid -->
+  <div class="table">
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      style="width: 100%; height: 500px;"
+      [rowData]="dataTrainees"
+      [columnDefs]="colDefs"
+      [defaultColDef]="defaultColDef"
+      (cellClicked)="onCellClicked($event)"
+      [gridOptions]="gridOptions"
+      (gridReady)="onGridReady($event)"
+      [rowSelection]="rowSelection"
+    ></ag-grid-angular>
+  </div>
+
+  <!-- The details part -->
+  <div class="details" *ngIf="clickOnRow || clickAddRow">
+    <app-details
+      [trainee]="trainee"
+      (traineeUpdated)="onTraineeUpdated($event)"
+      (saveClicked)="onSaveClicked($event)"
+    ></app-details>
+  </div>
+</div>
+
+<div class="card flex justify-content-center">
+  <p-dialog header="Well done!" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [breakpoints]="{ '960px': '75vw' }" [draggable]="false" [resizable]="false">
+      <p class="m-0">
+        The details have been saved.
+        <i class="pi-heart-fill" style="font-size: 1.5rem"></i>
+      </p>
+  </p-dialog>
+</div>
+
+<div class="card flex justify-content-center">
+  <p-dialog header="The operation is complete!" [(visible)]="visibleRemove" [modal]="true" [style]="{ width: '50vw' }" [breakpoints]="{ '960px': '75vw' }" [draggable]="false" [resizable]="false">
+      <p class="m-0">
+        The details have been removed.
+        <i class="pi-heart-fill" style="font-size: 1.5rem"></i>
+      </p>
+  </p-dialog>
+</div>
+
+
+
+
+
+

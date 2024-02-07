@@ -1,0 +1,127 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table{
+  width: 60%;
+}
+
+.details{
+  width: 40%;
+}
+
+.filter{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+.btns button{
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 20px 20px 50px grey;
+}
+
+.btnAdd{
+  background:  rgba(14, 2, 233, 0.947);
+  transition: all 0.5s;
+}
+
+.btnAdd span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btnAdd span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btnAdd:hover span {
+  padding-right: 25px;
+}
+
+.btnAdd:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.btnAdd:hover{
+  border: 1px solid black;
+  background:  rgba(67, 58, 227, 0.947);
+  color: black;
+}
+
+/* ------- */
+
+
+.btnRemove{
+  background: rgba(252,0,0,1);
+  transition: all 0.5s;
+}
+
+.btnRemove span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btnRemove span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btnRemove:hover span {
+  padding-right: 10px;
+}
+
+.btnRemove:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.btnRemove:hover{
+  border: 1px solid black;
+  background: rgb(255, 64, 64);
+  color: black;
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .table, .details {
+    width: 100%;
+  }
+
+  .btns button{
+    width: 80px;
+    height: 40px;
+    margin: 10px;
+    font-size: 14px;
+  }
+}

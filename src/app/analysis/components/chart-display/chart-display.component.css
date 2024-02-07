@@ -1,0 +1,27 @@
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .chart {
+    width: 30%; 
+    margin-bottom: 20px;
+    border: 2px dashed #000;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .chart {
+      width: 45%; /* for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .chart {
+      width: 100%; /*  for extra small screens */
+    }
+  }

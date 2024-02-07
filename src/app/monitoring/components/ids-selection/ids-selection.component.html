@@ -1,0 +1,11 @@
+
+<div class="container">
+  <label for="ids">Select IDs:</label>
+  <input class="card flex flex-wrap justify-content-center gap-2"
+  type="text"
+   id="ids"
+   (input)="onFilterTextChanged($event)"
+   pInputText
+   title="Search by ID, For multiple IDs separate with a space."
+   placeholder="Enter ids...">
+</div>

@@ -1,0 +1,17 @@
+<div class="filter">
+<app-ids-selection (filterTextChanged)="onFilterTextChanged($event)"></app-ids-selection>
+<app-names-selection (selectedNamesChange)="onFilterNameChanged($event)"></app-names-selection>
+<app-state-selection (outPutEventFail) = "handleChildFailed($event)" (outPutEventPass)="handleChildPassed($event)"></app-state-selection>
+</div>
+
+<div class="container">
+  <div class="table">
+    <ag-grid-angular
+  class="ag-theme-alpine"
+  style="width: 100%; height: 500px;"
+  [rowData]="rowData"
+  [columnDefs]="colDefs"
+  [getRowStyle]="rowStyle"
+  [defaultColDef] = "defaultColDef"
+  (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>

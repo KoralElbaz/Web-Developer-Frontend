@@ -1,0 +1,27 @@
+
+.navBar{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background: rgb(62,62,65);
+  background: linear-gradient(90deg, rgba(62,62,65,1) 20%, rgba(108,106,106,1) 100%, rgba(167,167,167,0.5) 100%);
+  min-height: 60px;
+  align-items: center;
+
+}
+.container{
+  padding: 10px;
+}
+
+a{
+  margin: 0 12px;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+a:hover {
+  background-color: gray;
+}
+

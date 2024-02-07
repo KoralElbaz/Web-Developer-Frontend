@@ -1,0 +1,19 @@
+<div class="container">
+  <label>Select state:</label>
+  <div>
+    <button type="button"
+   id="passed"
+   [ngStyle]="{'background-color': isPassedButtonGreen ? '#1dca62' : ''}"
+   (click)="clickPassed()"
+   id="passed"
+   >Passed</button>
+
+   <button type="button"
+   id="failed"
+   [ngStyle]="{'background-color': isFailedButtonRed ? 'red' : ''}"
+   autofocus
+   (click)="clickFailed()"
+   id="failed"
+   >Failed</button>
+  </div>
+</div>

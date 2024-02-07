@@ -1,0 +1,12 @@
+<div class=container>
+  <label for="filter-text-box">Filter: </label>
+  <input
+    type="text"
+    class= "form-control"
+    id="filter-text-box"
+    (input)="onFilterTextChanged($event)"
+    placeholder="ID: Enter you search text here"
+    [value]="filterText"
+    title="Search by ID"
+    >
+</div>

@@ -1,0 +1,65 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
+/* Tooltip container */
+.container {
+  position: relative;
+}
+
+/* Tooltip text */
+.container .form-control[title]:hover:after {
+  content: attr(title);
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+/* Hide the tooltip text by default */
+.container .form-control[title]:after {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}

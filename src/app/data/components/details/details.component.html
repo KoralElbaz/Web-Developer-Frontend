@@ -1,0 +1,63 @@
+
+<div class="details-container">
+  <form>
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input type="text"
+      id="id" name="id"
+      [(ngModel)]='trainee.id'
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="trainee.name">
+    </div>
+
+    <div class="form-group">
+      <label for="grade">Grade:</label>
+      <input type="text" id="grade" name="grade" [(ngModel)]="trainee.grade">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" [(ngModel)]="trainee.email">
+    </div>
+
+    <div class="form-group">
+      <label for="date_joined">Date Joined:</label>
+      <input type="text" id="date_joined" name="date_joined" [(ngModel)]="trainee.date_joined">
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" [(ngModel)]="trainee.address">
+    </div>
+
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" [(ngModel)]="trainee.city">
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country" [(ngModel)]="trainee.country">
+    </div>
+
+    <div class="form-group">
+      <label for="zip">Zip:</label>
+      <input type="text" id="zip" name="zip" [(ngModel)]="trainee.zip">
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" [(ngModel)]="trainee.subject">
+    </div>
+
+    <button type="submit"
+    (click)="save()"
+    >
+    Save</button>
+  </form>
+</div>
+

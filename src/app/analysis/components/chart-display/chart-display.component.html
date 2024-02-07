@@ -1,0 +1,24 @@
+<app-ids-selection (selectedIdsChange) = "handleChildIDs($event)"></app-ids-selection>
+<app-subjects-selection (selectedSubjectsChange) = "handleChildSubjects($event)"></app-subjects-selection>
+
+<div class="charts-container"  >
+
+  <div class="chart" id="chart1" cdkDrag>
+    <p>Given an ID, show his average scores over the years.</p>
+    <canvas id="chartId1" ></canvas>
+  </div>
+
+  <div class="chart" id="chart2" cdkDrag>
+    Given IDs, shows the overall grade point average (all years).
+    <canvas id="chartId2" ></canvas>
+  </div>
+
+  <div class="chart" id="chart3" cdkDrag>
+    <p>Given a subjects, show the overall grade point average.</p>
+    <canvas id="chartAvgSubjects" ></canvas>
+  </div>
+</div>
+
+
+
+
